@@ -1,0 +1,41 @@
+<h1>Sommario carrello</h1>
+
+
+<div *ngIf="carrello.totaleAbitazioni ==0" class="m-3">
+    Carrello vuoto torna alla
+    <a class="btn btn-success" routerLink="/home">Home</a>  
+    per selezionare degli immobili
+</div>
+
+<div  *ngIf="carrello.totaleAbitazioni !=0" class="m-2">Di seguito le abitazione che hai selezionato</div>
+
+
+
+<table *ngIf="carrello.totaleAbitazioni !=0"
+class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>Foto</th>
+        <th>Nome</th>
+        <th>Città</th>
+        <th>Prezzo</th>
+        <th>Azioni</th>
+    </tr>
+    </thead>
+    <tbody>
+           <tr *ngFor="let abitazione of carrello.listaAbitazioni">
+            <td><img ngSrc="assets/img/{{abitazione.urlImage}}" width="50" height="50"></td>
+            <td>{{abitazione.nome}} </td>
+            <td>{{abitazione.citta}} </td>
+            <td>{{abitazione.prezzo}} </td>
+            <td><button class="btn btn-danger" (click)="rimuoviDalCarrello(abitazione.id)">Cancella</button></td>
+
+           </tr> 
+    </tbody>
+    <tfoot>
+        <tr><td colspan="2">Totale</td>
+            <td>{{carrello.totale}}</td>
+        <td></td>
+    </tr>
+    </tfoot>
+</table>

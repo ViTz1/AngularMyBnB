@@ -1,0 +1,16 @@
+
+
+-Creare un nuoivo progetto con Angular 14 (npx)
+- il progetto si chiama Olimpiadi14 deve avere bootstrap
+- deve avere una index che visulizzi 
+	- un componente navbar
+	- componente atleta-list che visualizzi un 
+	elenco di atleti che partecipano alle olimpiadi
+	id, nome, cognome, specialita, nazione
+	- un componente footer
+
+
+Modificare il navbar affinche abbia i seguenti:
+- Home, Atleti, Nazioni, Sports, Sedi, Login
+
+Modificare il footer a vostro piacimento

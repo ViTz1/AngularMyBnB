@@ -1,0 +1,29 @@
+<div class="row m-2">
+  <span>Elementi nel carrello :{{ carrello.totaleAbitazioni }} </span>
+  <span>Totale carrello :{{ carrello.totale }} </span>
+  <span style="color:red" *ngIf="messaggio">Attenzione:{{ messaggio }} </span>
+  <div class="col-md-4 mb-4" 
+*ngFor="let abitazione of elencoAbitazioni">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">{{ abitazione.nome }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">ID: {{ abitazione.id }}</h6>
+        <p class="card-text">
+          <img *ngIf="abitazione.urlImage"  width="200" height="100"
+         ngSrc="assets/img/{{abitazione.urlImage}}" ><br>
+          {{ abitazione.descrizione }}
+        </p>
+
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-between">
+          <span><strong>Prezzo:</strong> €{{ abitazione.prezzo }}</span>
+          <span><strong>Città:</strong> {{ abitazione.citta }}</span>
+          <button class="btn btn-success"
+          
+          (click)="aggiungiAlCarrello(abitazione!)">Aggiungi al carrello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

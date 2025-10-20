@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container">
+  Elementi di angular che posso usare:<br>
+  <ul>
+    <li>Interpolation, ovvero visualizzare un dato o variabile del file ts </li>
+    <li>Intepolazione di title: {{title}}</li>
+    <li>Uso di direttiva *ngIf :<br>
+      <span *ngIf="isPausa">E' ora di fare la pausa</span> 
+      <span *ngIf="!isPausa">non è ancora  ora di fare la pausa...lavorare!!</span>
+    </li>
+    <li>Esempio di *ngFor su array di nomi:
+        <h6 *ngFor="let nome of nomi"> 
+          {{nome|uppercase}} 
+        </h6>
+
+    </li>
+    <li>Esempio di *ngFor su array di allievi(oggetti):
+        <div *ngFor="let allievo of allievi">
+          {{allievo.cognome}} {{allievo.nome}} {{allievo.eta}} 
+          <span style="color: red;" *ngIf="allievo.eta<18">
+            minorenne
+          </span>
+
+        </div>
+       </li>
+       <li>Esempio di componente figlio:
+          <app-catalogo></app-catalogo>
+
+       </li> 
+
+
+
+  </ul>
+
+
+</div>
+
+<app-footer></app-footer>

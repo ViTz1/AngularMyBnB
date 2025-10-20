@@ -1,0 +1,21 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Descrizione</th>
+        <th>Prezzo</th>
+        <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let abitazione of elencoAbitazioni">
+            <td>{{abitazione.id}}</td>
+            <td>{{abitazione.nome}}</td>
+            <td>{{abitazione.descrizione}}</td>
+            <td>{{abitazione.prezzo}}</td>
+            <td>{{abitazione.citta}}</td>
+        </tr>
+
+    </tbody>
+</table>

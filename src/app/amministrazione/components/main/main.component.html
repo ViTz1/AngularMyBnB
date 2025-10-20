@@ -1,0 +1,25 @@
+<div class="row mt-2">
+    <div class="col-3">
+        <div class="btn-group-vertical w-100" role="group">
+            <button class="btn btn-outline-info mt-2">
+                Logout
+            </button>
+            <button class="btn btn-outline-info mt-2" 
+            routerLink="/amministrazione/main/abitazione-list"
+                routerLinkActive="active">
+                Lista abitazioni
+            </button>  
+            <button class="btn btn-outline-info mt-2" 
+            routerLink="/amministrazione/main/ordine-list"
+                routerLinkActive="active">
+                Lista ordini
+            </button>
+
+        </div>
+    </div>
+
+    <div class="col-9">
+        <!-- router outlet di secondo livello-->
+        <router-outlet></router-outlet>
+    </div>
+</div>
